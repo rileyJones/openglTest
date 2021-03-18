@@ -1,5 +1,6 @@
 #include "common.h"
-
+#define WIDTH 640
+#define HEIGHT 480
 
 GLFWwindow* init() {
     GLFWwindow *window;
@@ -12,7 +13,8 @@ GLFWwindow* init() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    window = glfwCreateWindow(640, 480, "testName", NULL, NULL);
+    window = glfwCreateWindow(WIDTH, HEIGHT, "testName", NULL, NULL);
+    
 
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
@@ -21,6 +23,9 @@ GLFWwindow* init() {
         printf("glad failed to init");
         exit(-1);
     }
+
+    
+    glViewport(0, 0, HEIGHT, HEIGHT); 
     return window;
 }
 

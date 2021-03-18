@@ -10,7 +10,8 @@ int main() {
     shaders[0] = compileShader("shaders/vertCube.shader", GL_VERTEX_SHADER);
     shaders[1] = compileShader("shaders/fragCube.shader", GL_FRAGMENT_SHADER);
     GLuint shaderProgram = createProgram(shaders, SHADER_COUNT);
-    
+        
+
 
     static const GLfloat vertices_position[] = {
 		-0.25f, -0.25f, -0.25f,
