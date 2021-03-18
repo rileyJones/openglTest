@@ -2,9 +2,9 @@
 .SUFFIXES: .c .o
 
 CC = g++
-CFLAGS = 
-OBJECTS = glad.o main.o init.o
-PNAME = testGL
+CFLAGS = -pedantic -Wall 
+OBJECTS = glad.o blocks.o init.o createProgram.o
+PNAME = blocks
 RM = rm -f
 DEBUG = ddd
 MEMTEST = valgrind
@@ -31,3 +31,5 @@ glad.o:
 
 main.o: main.c common.h
 init.o: init.c common.h
+blocks.o: blocks.c common.h
+createProgram.o: createProgram.c common.h

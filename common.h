@@ -11,4 +11,7 @@
 GLFWwindow* init();
 void close(GLFWwindow *window);
 
+GLuint compileShader(const char *shader_path, GLenum shaderType);
+GLuint createProgram(GLuint *shaders, int shaderCount); 
+
 #endif
